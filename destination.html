@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My External Webpage</title>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+    var jsonData = document.querySelector("input[name='jsonData']").value;
+    var formData = JSON.parse(jsonData);
+
+    // Access the form data
+    console.log(formData.name);
+    console.log(formData.email);
+    // Access other form fields as needed
+  });
+</script>
+ <body>
+ </body>
+</body>
+</html>
