@@ -24,21 +24,13 @@
     // Convert the JSON object to a string
     var jsonData = JSON.stringify(formData);
 
-    // Create a hidden input field to hold the JSON data
-    var input = document.createElement("input");
-    input.setAttribute("type", "hidden");
-    input.setAttribute("name", "jsonData");
-    input.setAttribute("value", jsonData);
+    // Store the JSON data in Local Storage
+    localStorage.setItem("formData", jsonData);
 
-    // Append the hidden input field to the form
-    this.appendChild(input);
-
-    // Submit the form to the destination page
-    this.action = "destination.html";
-    this.method = "POST";
-    this.submit();
+    // Navigate to the external page
+    window.location.href = "destination.html";
   });
 </script>
-</body>
+
 </body>
 </html>
