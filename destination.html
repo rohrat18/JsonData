@@ -5,15 +5,23 @@
 
 <script>
   window.addEventListener("DOMContentLoaded", function() {
-    var jsonData = document.querySelector("input[name='jsonData']").value;
-    var formData = JSON.parse(jsonData);
+    // Retrieve the JSON data from Local Storage
+    var jsonData = localStorage.getItem("formData");
 
-    // Access the form data
-    console.log(formData.name);
-    console.log(formData.email);
-    // Access other form fields as needed
+    if (jsonData) {
+      var formData = JSON.parse(jsonData);
+
+      // Access the form data
+      console.log(formData.name);
+      console.log(formData.email);
+      // Access other form fields as needed
+
+      // Clear the stored JSON data from Local Storage
+      localStorage.removeItem("formData");
+    }
   });
 </script>
+
  <body>
  </body>
 </body>
